@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+// day fibonanci
+
+
+<script>
+
+    function prinFibonacci(n) {
+        let a = 0;
+        let b = 1;
+        let temp;
+        for (i = 2; i < n; i++) {
+            temp = b;
+            b = temp + a;
+            a = temp;
+            if (temp<=n){
+            document.write(temp);}
+        }
+    }
+    prinFibonacci(12);
+
+
+
+
+</script>
+
+</body>
+</html>
