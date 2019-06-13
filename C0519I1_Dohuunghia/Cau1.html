@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim Max Cua Mang</title>
+</head>
+<body>
+<script>
+    function findMaxScore(arr) {
+        let max = arr[0];
+        for (let i =0; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    let arr = [10, 5 ,2, 8 , -1 , 6 ,8];
+    document.write(findMaxScore(arr) + "<br>");
+
+    let arr1 = [2,4,0,5,1];
+    document.write(findMaxScore(arr1) + "<br>");
+
+    let arr2 = [-8,-6,-2,-6,-1,-1,-4];
+    document.write(findMaxScore(arr2) + "<br>");
+</script>
+</body>
+</html>

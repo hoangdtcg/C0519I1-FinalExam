@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, n) {
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] === n){
+                arr.splice(i,1);
+            }
+        }
+        return arr;
+    }
+
+      let arr = [12,6,3,7,21,5,7];
+    document.write(tryRemoveFromArray(arr, 2) + "<br>");
+
+    document.write(tryRemoveFromArray(arr, 12) + "<br>");
+
+    document.write(tryRemoveFromArray(arr, 7) + "<br>");
+
+    let arr1 = [12,6,3,4,21,5,7];
+    document.write(tryRemoveFromArray(arr1, 7) + "<br>");
+</script>
+</body>
+</html>
