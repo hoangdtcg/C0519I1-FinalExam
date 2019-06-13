@@ -13,7 +13,7 @@
 <!--Bieu dien hinh chu nhat-->
 <canvas width="600" height="600" style="border: black 1px solid" id="myCanvas"></canvas>
 <script>
-    function Rectangle(x,y,width,height,color) {
+    function Rectangle(x, y, width, height, color) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -27,7 +27,8 @@
             this.ctx.fill();
         }
     }
-    let Rect = new Rectangle(10,10,200,100,"#000000");
+
+    let Rect = new Rectangle(10, 10, 200, 100, "#000000");
     Rect.render();
 </script>
 </body>
