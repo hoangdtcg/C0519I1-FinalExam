@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Hien thi cac so trong day fibonacci nho hon so nhap tu ban phim-->
+<script>
+    function printFibonacci(n) {
+        let fistNum = 0;
+        let secondNum = 1;
+        let thirdNum;
+        document.write(fistNum + ';');
+        document.write(secondNum + ';');
+        do {
+            thirdNum = fistNum + secondNum;
+            fistNum = secondNum;
+            secondNum = thirdNum;
+            if (thirdNum < n) {
+                document.write(thirdNum + ';');
+            }
+        } while (thirdNum < n);
+    }
+</script>
+<input type="text" value="" id="inputNumber">
+<input type="button" value="Print" onclick="printFibonacci(parseInt(document.getElementById('inputNumber').value))">
+</body>
+</html>
