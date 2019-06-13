@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu diễn hình chữ nhật</title>
+</head>
+<body>
+<canvas id = "myCanvas" width="800" height="400" style="border: 2px solid black"></canvas>
+<script>
+    function Rectangle(x, y, width, height, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.canvas = document.getElementById("myCanvas");
+        this.render  = function () {
+            let context = this.canvas.getContext("2d");
+            context.beginPath();
+            context.fillStyle = this.color;
+            context.fillRect(this.x, this.y, this.width, this.height);
+            context.fill()
+        };
+    }
+    let myRectangle = new Rectangle( 10, 10, 200, 100, "#000000");
+    myRectangle.render();
+</script>
+</body>
+</html>

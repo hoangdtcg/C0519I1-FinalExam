@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    function findMaxScore(arr) {
+        let Max = arr[0];
+        for ( let i = 0; i < arr.length; i ++){
+            if ( arr[i] > Max){
+                arr[i] = Max;
+            }
+        }
+        return Max;
+    }
+    let arr = [3234,26,356,423,41,35,34,674,23,4];
+    console.log(findMaxScore(arr))
+</script>
+
+</body>
+</html>

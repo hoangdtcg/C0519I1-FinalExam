@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFrommArray(arr, n) {
+        let newArr;
+        for ( let i = 0; i < arr.length; i++){
+            if ( arr[i] === n){
+                arr.splice(i, 1);
+            }
+        }
+        return arr;
+    }
+    let arr = [1,2,24,23,534,6,234,534,634,32,23];
+    let n = 24;
+    console.log(tryRemoveFrommArray(arr,n))
+</script>
+
+</body>
+</html>
