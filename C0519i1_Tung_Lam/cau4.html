@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border:1px solid #000000"></canvas>
+<script>
+    let Rectange = function (x, y, width, height ,) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = "black";
+        this.canvas = document.getElementById("canvas");
+
+        this.render = function () {
+            let cxt = this.canvas.getContext("2d");
+            cxt.beginPath();
+            cxt.fillStyle = this.color;
+            cxt.fillRect(this.x, this.y, this.width, this.height);
+            cxt.fill();
+            cxt.closePath();
+        };
+
+    };
+
+    let rectange = new Rectange(10, 10, 200, 100, "#000000");
+    rectange.render();
+
+</script>
+
+</body>
+</html>
