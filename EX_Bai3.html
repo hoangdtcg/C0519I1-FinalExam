@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>printFibonacci</title>
+</head>
+<body>
+<script>
+    function printFibonacci (n) {
+        let number1 = 1;
+        let number2 = 1;
+        let number3 = 2;
+        document.write(+ number1 + ";");
+        document.write(+ number2 + ";");
+
+        do {
+            number3 = number2 + number1;
+            number1 = number2;
+            number2 = number3;
+            if (number3 < n) {
+                document.write( + number3 + "; ")
+
+            }
+        } while (number3 < n)
+    }
+    let number = prompt("enter a number: ");
+    printFibonacci(number);
+</script>
+</body>
+</html>
