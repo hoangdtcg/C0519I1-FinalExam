@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="number">
+<button onclick="display()">click</button>
+<script>
+  function prinFibonacci() {
+    let arr = [];
+    let n = parseInt(document.getElementById('number').value);
+    arr[0] = 0;
+    arr[1] = 1;
+    for (let i = 2; ; i++) {
+      arr[i] = arr[i - 1] + arr[i - 2];
+      if (arr[i] > n) {
+        arr.pop();
+        break;
+      }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+      document.write(arr[i] + ' ');
+    }
+  }
+
+  function display() {
+    let number = parseInt(document.getElementById('number').value);
+    document.write(prinFibonacci());
+  }
+
+
+</script>
+</body>
+</html>
