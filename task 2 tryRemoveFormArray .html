@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tryRemoveFormArray</title>
+</head>
+<body>
+<script>
+    function tryRemoveFormArray(arr, value) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === value) {
+                arr.splice(i, 1);
+
+            }
+        }
+        return arr;
+    }
+
+    let arr = [12, 6, 4, 3, 1, 76, 34, 21];
+    let arr1 = [23, 423, 12, 3, 12, 41, 2];
+
+    document.write(tryRemoveFormArray(" tryRemoveFormArray : " + arr, 34));
+    document.write("<br>");
+    document.write(tryRemoveFormArray(" tryRemoveFormArray : " + arr1, 12));
+
+</script>
+</body>
+</html>
