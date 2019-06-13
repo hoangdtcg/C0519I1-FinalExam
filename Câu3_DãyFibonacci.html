@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let printFibonacci = function(n) {
+        let arr = [];
+        arr[0] = 1;
+        arr[1] = 1;
+        for(let i = 2; ; i++){
+            arr[i] = arr[i - 1] + arr[i - 2];
+            if(arr[i] > n){
+                arr.pop();
+                break;
+            }
+        }
+        return arr;
+    };
+    document.write(printFibonacci(parseInt(prompt("nhap so :"))) + "</br>");
+</script>
+</body>
+</html>
