@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ function prinFibonacci(n) {
+   let arr = [];
+   arr[0] = 0;
+   arr[1] = 1;
+   for( let i = 2;;i++){
+     arr[i] = arr[i-1] + arr[i - 2]
+     if (arr[i] > n){
+       arr.pop();
+       break;
+     }
+   }return arr;
+ }
+ document.write(prinFibonacci(15));
+</script>
+</body>
+</html>
