@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<canvas id="myCanvas" height="600" width="600" style="border: solid blanchedalmond"></canvas>
+
+<script>
+    let Retangle = function (id, x, y, width, height, color) {
+        this.canvas = document.getElementById(id);
+        this.ctx = this.canvas.getContext("2d");
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+
+        this.drawRetangle = function () {
+            this.ctx.beginPath();
+            this.ctx.fillStyle = this.color;
+            this.ctx.fillRect(this.x, this.y, this.width, this.height);
+            this.ctx.fill();
+        }
+    };
+    let retangle = new Retangle("myCanvas", 10, 10, 200, 100, "#000000");
+    retangle.drawRetangle();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="number" > Fibonanicc is:
+<input type="button" value="Submit" onclick="Fibonacci()">
+<p id="resulf"></p>
+                <script>
+                    function Fibonacci() {
+                        let number  = document.getElementById("number").value;
+
+                        let number1 = 1;
+                        let number2 = 0;
+                        let temp;
+                        let arr = [];
+                    for(let i = 0; i < number;i++){
+                        temp = number1 + number2;
+                        number1 = number2;
+                        number2 = temp;
+                        arr.push(temp)
+                         }
+                    document.getElementById("resulf").innerHTML = arr.toString();
+                    }
+
+
+                </script>
+</body>
+</html>
