@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Ham loai bo cac phan tu co gia tri bang N roi in ra mang-->
+<!--Neu khong co phan tu nao bang N thi in ra mang ban dau-->
+<script>
+    function tryRemoveFromArray(arr, n) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === n) {
+                arr.splice(i, 1);
+            }
+        }
+        return arr;
+    }
+
+    let arr = [12, 6, 3, 4, 7, 8, 12, 10];
+    let n = 12;
+    console.log(tryRemoveFromArray(arr, n));
+</script>
+</body>
+</html>
